@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodHub | Choose your best food</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.22/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style>
+    header {
+      background-image: url("./banner.webp");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+  <body>
+    <header class="h-[600px]">
+      <div class="container mx-auto">
+        <nav class="flex justify-between pt-4 text-white">
+          <div class="flex items-center gap-2">
+            <img class="w-6 h-6" src="./logo1.png" alt="" />
+            <h2 class="text-2xl font-bold italic">Food Hub</h2>
+          </div>
+          <div class="flex items-center gap-12">
+            <a class="font-bold" href="#">Home</a>
+            <a class="font-bold" href="#">Recipes</a>
+            <a class="font-bold" href="#">Pages</a>
+            <a class="font-bold" href="#">Blog</a>
+            <a class="font-bold" href="#">Shop</a>
+          </div>
+          <a href="#food-container">
+              <button
+                class="bg-purple-600 text-white font-bold rounded-full px-8 py-2"
+              >
+                Buy Food
+              </button>
+          </a>
+        </nav>
+        <!-- bznner -->
+        <div class="text-white w-1/2 mt-32 space-y-4">
+          <h1 class="text-5xl font-bold">
+            Our 54 Most-Comforting <br> Casserole Recipes
+          </h1>
+          <p class="font-medium text-zinc-200">Choose Your Best Recipes – Discover flavors you'll love and meals that satisfy, all in one place!</p>
+          <p id="error" class="text-lime-200 hidden">!!Please enter right recipe name</p>
+          <input id="search-field" class="py-3 px-4 bg-transparent border-2 border-white placeholder:text-gray-200" type="text" placeholder="Search your favorite food">
+          <a href="#search-heading">
+            <button id="btn-search" onclick="handleSearch()" class="bg-purple-600 text-white font-bold px-8 py-3 border-2 border-white hover:bg-purple-700 hover:rounded-r-full">Search</button>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+        <section id="allFoods" class="container mx-auto">
+            <div id="heading-title">
+                <h2 class="text-4xl text-center font-bold mt-8"><span id="heading-text">All Food</span> Recipes here</h2>
+                <hr class="w-3/12 mt-1 mx-auto h-1 bg-purple-400">
+            </div>
+            <h4 id="search-title" class="hidden text-center text-xl my-6"><span id="search-text"></span></h4>
+            <div id="food-container" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 mt-12">
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="./food.js"></script>
+  </body>
+</html>
